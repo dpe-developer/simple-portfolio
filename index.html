@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Paul — Terminal Portfolio</title>
+  <meta name="description" content="Interactive terminal-style portfolio of David Paul, a Full-Stack Web Developer. Type 'help' to explore." />
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <main class="terminal" id="terminal">
+    <div class="terminal-titlebar">
+      <div class="traffic-lights">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <div class="terminal-title">guest@david-paul-portfolio: ~</div>
+    </div>
+
+    <div class="terminal-body" id="terminalBody">
+      <div class="terminal-output" id="terminalOutput" role="log" aria-live="polite" aria-relevant="additions"></div>
+    </div>
+  </main>
+
+  <p class="hint">Type <code>help</code> to get started &middot; <kbd>&uarr;</kbd>/<kbd>&darr;</kbd> for history &middot; <kbd>Tab</kbd> to autocomplete</p>
+
+  <noscript>
+    <div class="noscript-fallback">
+      <h1>David Paul — Full-Stack Web Developer</h1>
+      <p>This portfolio is an interactive terminal and needs JavaScript enabled to run.</p>
+      <p>Contact: <a href="mailto:hello@davidpaul.dev">hello@davidpaul.dev</a></p>
+    </div>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
