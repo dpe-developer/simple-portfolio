@@ -2,6 +2,14 @@
 
 A modern, single-page portfolio: sticky nav, hero, about, skills, and project sections — plus an interactive terminal easter egg for visitors who'd rather type commands than scroll.
 
+## Features
+
+- **Zero dependencies** — plain HTML, CSS, and JS, no build step, no framework.
+- **Interactive terminal** — a fake shell with command history, Tab autocomplete, and a boot sequence, driven by the same data as the visual sections.
+- **Scroll-reveal animations** on every section, with a `prefers-reduced-motion` fallback that skips straight to the visible state.
+- **Responsive layout** with a collapsible mobile nav, down to small phone widths.
+- **Accessible by default** — semantic landmarks, `aria-live` terminal output, keyboard-operable nav toggle, and a `<noscript>` fallback.
+
 ## Running locally
 
 No build step or dependencies — it's plain HTML/CSS/JS.
@@ -11,6 +19,13 @@ python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000` in a browser. Alternatively, just open `index.html` directly.
+
+## Deploying
+
+Since it's fully static, it deploys as-is to any static host — no build command needed:
+
+- **GitHub Pages** — enable Pages on this repo (Settings → Pages), serving from the `main` branch root.
+- **Netlify / Vercel** — import the repo with an empty build command and `.` as the publish/output directory.
 
 ## Terminal
 
