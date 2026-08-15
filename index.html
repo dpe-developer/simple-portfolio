@@ -3,35 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>David Paul — Terminal Portfolio</title>
-  <meta name="description" content="Interactive terminal-style portfolio of David Paul, a Full-Stack Web Developer. Type 'help' to explore." />
+  <meta name="theme-color" content="#05060a" />
+  <title>David Paul — Full-Stack Web Developer</title>
+  <meta name="description" content="Portfolio of David Paul, a full-stack web developer. Projects, skills, and an interactive terminal — type 'help' to explore it." />
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="crt-overlay" aria-hidden="true"></div>
+  <div class="bg-decor" aria-hidden="true"></div>
 
-  <main class="terminal" id="terminal">
-    <div class="terminal-titlebar">
-      <div class="traffic-lights">
-        <span class="dot dot-red"></span>
-        <span class="dot dot-yellow"></span>
-        <span class="dot dot-green"></span>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#home" class="logo">David<span class="logo-accent">Paul</span><span class="logo-caret" aria-hidden="true">_</span></a>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#terminal">Terminal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary nav-cta">Let's talk</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteNav">
+        <svg class="icon icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <p class="eyebrow reveal"><span class="status-dot-pulse" aria-hidden="true"></span> Open to opportunities</p>
+        <h1 class="reveal">Hi, I'm <span class="text-gradient">David Paul</span>.<br />I build things for the web.</h1>
+        <p class="hero-sub reveal">
+          Full-stack web developer crafting fast, accessible, end-to-end applications —
+          from React interfaces down to the databases and infrastructure behind them.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="#terminal" class="btn btn-ghost">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            Open terminal
+          </a>
+        </div>
+        <ul class="hero-tags reveal">
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>PostgreSQL</li>
+        </ul>
       </div>
-      <div class="terminal-title">guest@david-paul-portfolio: ~</div>
-    </div>
 
-    <div class="terminal-body" id="terminalBody">
-      <div class="terminal-output" id="terminalOutput" role="log" aria-live="polite" aria-relevant="additions"></div>
-    </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to content">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+      </a>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-inner">
+        <p class="section-kicker reveal">About</p>
+        <h2 class="section-title reveal">A bit about me</h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a full-stack web developer who likes taking a product from a rough idea to something
+              real people click on — untangling the UI, the API, and the database schema all in the same afternoon.
+            </p>
+            <p>
+              Comfortable across the stack: JavaScript/TypeScript, React and Next.js on the front end,
+              Node.js and Express behind it, PostgreSQL or MongoDB underneath, shipped on AWS with Docker and CI/CD.
+            </p>
+            <p class="about-cta">Currently open to new opportunities — <a href="#contact">let's talk</a>.</p>
+          </div>
+
+          <ul class="about-stats reveal">
+            <li>
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Years building for the web</span>
+            </li>
+            <li>
+              <span class="stat-num">20+</span>
+              <span class="stat-label">Projects shipped</span>
+            </li>
+            <li>
+              <span class="stat-num">Full</span>
+              <span class="stat-label">Stack, start to finish</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+      <div class="section-inner">
+        <p class="section-kicker reveal">Skills</p>
+        <h2 class="section-title reveal">Tools of the trade</h2>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-inner">
+        <p class="section-kicker reveal">Projects</p>
+        <h2 class="section-title reveal">Featured work</h2>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt terminal-section" id="terminal">
+      <div class="section-inner">
+        <p class="section-kicker reveal">Bonus</p>
+        <h2 class="section-title reveal">Prefer the command line?</h2>
+        <p class="section-sub reveal">Everything above, plus a few easter eggs — type <code>help</code> to start.</p>
+
+        <div class="terminal-wrap reveal">
+          <div class="crt-overlay" aria-hidden="true"></div>
+          <div class="terminal" id="terminal-window">
+            <div class="terminal-titlebar">
+              <div class="traffic-lights">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">guest@david-paul-portfolio: ~</div>
+            </div>
+
+            <div class="terminal-body" id="terminalBody">
+              <div class="terminal-output" id="terminalOutput" role="log" aria-live="polite" aria-relevant="additions"></div>
+            </div>
+          </div>
+
+          <p class="hint">Type <code>help</code> to get started &middot; <kbd>&uarr;</kbd>/<kbd>&darr;</kbd> for history &middot; <kbd>Tab</kbd> to autocomplete</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-inner contact-inner">
+        <p class="section-kicker reveal">Contact</p>
+        <h2 class="section-title reveal">Let's build something together</h2>
+        <p class="section-sub reveal">Currently open to new opportunities — reach out and I'll get back to you quickly.</p>
+
+        <a href="mailto:hello@davidpaul.dev" class="btn btn-primary btn-lg reveal">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          hello@davidpaul.dev
+        </a>
+
+        <div class="social-links reveal">
+          <a href="#" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <p class="hint">Type <code>help</code> to get started &middot; <kbd>&uarr;</kbd>/<kbd>&darr;</kbd> for history &middot; <kbd>Tab</kbd> to autocomplete</p>
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <p>&copy; <span id="year"></span> David Paul. Built with plain HTML, CSS &amp; JS.</p>
+      <a href="#home" class="back-to-top">Back to top &uarr;</a>
+    </div>
+  </footer>
 
   <noscript>
     <div class="noscript-fallback">
       <h1>David Paul — Full-Stack Web Developer</h1>
-      <p>This portfolio is an interactive terminal and needs JavaScript enabled to run.</p>
+      <p>This portfolio needs JavaScript enabled to render properly (including the interactive terminal).</p>
       <p>Contact: <a href="mailto:hello@davidpaul.dev">hello@davidpaul.dev</a></p>
     </div>
   </noscript>

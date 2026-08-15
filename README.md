@@ -1,6 +1,6 @@
-# David Paul — Terminal Portfolio
+# David Paul — Portfolio
 
-An interactive, terminal-styled portfolio site. Instead of scrolling sections, visitors type commands to explore who I am, what I've built, and how to reach me.
+A modern, single-page portfolio: sticky nav, hero, about, skills, and project sections — plus an interactive terminal easter egg for visitors who'd rather type commands than scroll.
 
 ## Running locally
 
@@ -12,7 +12,9 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000` in a browser. Alternatively, just open `index.html` directly.
 
-## Commands
+## Terminal
+
+Scroll to (or click "Open terminal" / "Terminal" in the nav) the terminal section and it boots automatically. Everything in the visual sections is also reachable as a command:
 
 | Command | Description |
 | --- | --- |
@@ -34,11 +36,11 @@ Press <kbd>↑</kbd>/<kbd>↓</kbd> to browse command history and <kbd>Tab</kbd>
 ## Project structure
 
 ```
-index.html   terminal window markup
-styles.css   terminal theme (dark, monospace, CRT scanline overlay)
-script.js    command parser, history/autocomplete, boot sequence
+index.html   page markup — nav, hero, about, skills, projects, terminal, contact, footer
+styles.css   design system (colors/type/spacing) + terminal theme (CRT scanline overlay)
+script.js    renders skills/project cards, nav + scroll-reveal behavior, terminal (parser, history/autocomplete, boot sequence)
 ```
 
 ## Customizing
 
-All personal content — name, bio, skills, projects, and contact links — lives in the `PROJECTS`, `SKILLS`, and command handlers near the top of `script.js`. Update those objects to make this your own; no other files need to change for content edits.
+All personal content — name, bio, skills, projects, and contact links — lives in the `PROJECTS` and `SKILLS` data and the command handlers near the top of `script.js`. `PROJECTS` and `SKILLS` are the single source of truth: they feed both the visual cards and the terminal's `projects`/`skills` commands, so update them once and both stay in sync. Section copy (hero heading, about text, contact links) lives directly in `index.html`.
